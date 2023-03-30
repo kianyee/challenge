@@ -20,5 +20,8 @@ describe('vehicle service', () => {
         expect(nextPendingRoute?.id).toBe('Route2')
         const fastestRoute = getFastestReturningRoute(route)
         expect(fastestRoute?.id).toBe('Route1')
+        route = updateRouteStatus(route, 'Route2', 'Delivering', 1)
+        const nextFastestRoute = getFastestReturningRoute(route)
+        expect(nextFastestRoute?.id).toBe('Route2')
     })
 })
