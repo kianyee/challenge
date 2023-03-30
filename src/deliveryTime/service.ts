@@ -15,7 +15,14 @@ export function getDeliveryDetailById(deliveryDetails: DeliveryCostAndTime[], id
 }
 
 export function calculateTimePerTrip(speed: number, distance: number): number {
-    return covertTo2DecimalPlace((distance / speed), 2)
+    try {
+        if (speed === 0) {
+            throw new Error('Speed cannot be zero')
+        }
+        return covertTo2DecimalPlace((distance / speed), 2)
+    } catch (e) {
+        throw e
+    }
 }
 
 export function generateDeliveryCostAndTime(deliveryDetails: DeliveryDetail[], baseDeliveryCose: number, speed: number) {

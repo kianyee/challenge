@@ -17,4 +17,4 @@ node src/estimateDeliveryTime.js
 go to src/offers/offerCode.ts
 
 # add or remove the input for each 
-go to src/input/input.ts
+go to src/input.ts
