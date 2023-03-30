@@ -1,6 +1,6 @@
 import { getDiscount } from "../src/offers/service";
 
-describe('offer time service', () => {
+describe('offer service', () => {
     test('should calculate time correctly', () => {
         expect(getDiscount(50, 30, '')).toBe(0)
         expect(getDiscount(50, 30, 'OFR001')).toBe(0)
